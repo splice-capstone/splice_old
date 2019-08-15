@@ -15,6 +15,7 @@
     "react": "16.8.3",
     "react-native": "^0.59.9",
     "react-native-firebase": "^5.5.4",
+    "react-native-pod": "^1.11.0",
     "watchman": "^1.0.0"
   },
   "devDependencies": {
