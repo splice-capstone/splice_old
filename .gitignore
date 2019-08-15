@@ -57,5 +57,6 @@ buck-out/
 ios/Pods
 
 #super secrets
-ios/GoogleService-Info.plist
-android/app/google-services.json
+GoogleService-Info.plist
+google-services.json
+GoogleService-Info.plist
