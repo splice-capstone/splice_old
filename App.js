@@ -12,8 +12,34 @@ import firebase from "react-native-firebase";
 import db, {userInit} from './src/tools/firebase'
 
 const App = () => {
-  const [user, setUser]= useState()
+  const [user, setUser]= useState({})
+
+  const initStuff = async () => {
+    await userInit()
+    const userDoc = await db.collection('users').doc('f9ArtRIEWMHokxUxWxLg').get()
+    console.log(userDoc.data())
+    setUser(userDoc.data())
+
+  }
+
+  useEffect(() => {
+    initStuff()
+  }, [])
+
+  return (
+    <ScrollView>
+      <View style={styles.container}>
+        <Text style={styles.welcome}>hiasdfasdfasdfasdf</Text>
+        <Text style={styles.welcome}>hiasdfasdfasdfasdf</Text>
+
+        <Text style={styles.welcome}>user's name: {user.name}</Text>
+
+      </View>
+    </ScrollView>
+  )
 }
+
+export default App
 
 const styles = StyleSheet.create({
   container: {
