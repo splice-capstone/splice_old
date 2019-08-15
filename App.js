@@ -23,6 +23,7 @@ const App = () => {
   }
 
   useEffect(() => {
+    console.log('hehe')
     initStuff()
   }, [])
 
@@ -32,7 +33,7 @@ const App = () => {
         <Text style={styles.welcome}>hiasdfasdfasdfasdf</Text>
         <Text style={styles.welcome}>hiasdfasdfasdfasdf</Text>
 
-        <Text style={styles.welcome}>user's name: {user.name}</Text>
+        <Text style={styles.welcome}>user's name hello: {user.name}</Text>
 
       </View>
     </ScrollView>
